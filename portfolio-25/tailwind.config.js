@@ -13,6 +13,7 @@ export default {
         light: "#F0F0F0",
         grayMist: "#909090",
         greyDark: "#2e2e2e",
+        greyCardDard: "#1B1B1B",
       },
       animation: {
         slide: "slide 0.5s ease-in-out",
