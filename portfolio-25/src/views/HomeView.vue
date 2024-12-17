@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 <template>
   <DefaultLayoutView>
     <!-- hero section -->
-    <section id="home">
+    <section id="home" class="pt-20 md:pt-0">
       <div
         class="h-screen hero-section flex flex-col md:flex-row gap-6 md:gap-0 items-center"
       >
@@ -48,34 +48,71 @@ gsap.registerPlugin(ScrollTrigger);
     </section>
     <!-- welcoming section -->
     <section id="about" class="">
-      <div class="w-full flex flex-col items-center justify-center gap-4">
-        <div class="flex gap-3 md:gap-4 items-center">
-          <h2 class="text-light font-LibreBaskerville text-4xl md:text-5xl">
+      <div
+        class="w-full flex flex-col items-center justify-center gap-3 sm:gap-4 px-4"
+      >
+        <!-- Introduction -->
+        <div class="flex flex-wrap items-center justify-center gap-3 md:gap-4">
+          <h2
+            class="text-light font-LibreBaskerville text-4xl md:text-5xl text-center"
+          >
             Hi👋, I'm
           </h2>
-          <img src="/src/assets/image/hero-img-sm.png" alt="" />
-          <h2 class="text-light font-LibreBaskerville text-5xl">Faiz</h2>
+          <img
+            class="w-20 md:w-32"
+            src="/src/assets/image/hero-img-sm.png"
+            alt="Hero Image"
+          />
+          <h2
+            class="text-light font-LibreBaskerville text-4xl md:text-5xl text-center"
+          >
+            Faiz
+          </h2>
         </div>
-        <div class="flex gap-3 md:gap-4 items-center">
-          <h2 class="text-light font-LibreBaskerville text-4xl md:text-5xl">
+
+        <!-- Nationality and Role -->
+        <div class="flex flex-wrap items-center justify-center gap-3 md:gap-4">
+          <h2
+            class="text-light font-LibreBaskerville text-4xl md:text-5xl text-center"
+          >
             Indonesian
           </h2>
-          <img src="/src/assets/image/indonesian.png" alt="" />
-          <h2 class="text-light font-LibreBaskerville text-4xl md:text-5xl">
+          <img
+            class="w-20 md:w-32"
+            src="/src/assets/image/indonesian.png"
+            alt="Indonesian Flag"
+          />
+          <h2
+            class="text-light font-LibreBaskerville text-4xl md:text-5xl text-center"
+          >
             Developer &
           </h2>
         </div>
-        <div class="flex gap-3 md:gap-4 items-center">
-          <h2 class="text-light font-LibreBaskerville text-4xl md:text-5xl">
-            UI/UX Designer working
+
+        <!-- Job Description -->
+        <div class="flex flex-wrap items-center justify-center gap-3 md:gap-4">
+          <h2
+            class="text-light font-LibreBaskerville text-4xl md:text-5xl text-center"
+          >
+            UIX Designer
           </h2>
-          <img src="/src/assets/image/activity.png" alt="" />
-          <h2 class="text-light font-LibreBaskerville text-4xl md:text-5xl">
-            on
+          <img
+            class="w-20 md:w-32"
+            src="/src/assets/image/activity.png"
+            alt="Activity Icon"
+          />
+          <h2
+            class="text-light font-LibreBaskerville text-4xl md:text-5xl text-center"
+          >
+            working on
           </h2>
         </div>
-        <div class="flex gap-3 md:gap-4 items-center">
-          <h2 class="text-light font-LibreBaskerville text-4xl md:text-5xl">
+
+        <!-- Industry -->
+        <div class="flex flex-wrap items-center justify-center gap-3 md:gap-4">
+          <h2
+            class="text-light font-LibreBaskerville text-4xl md:text-5xl text-center"
+          >
             technology industries
           </h2>
         </div>
