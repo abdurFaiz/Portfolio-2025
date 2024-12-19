@@ -1,3 +1,13 @@
+<script setup>
+const handleSubSection = () => {
+  if (this.$route.path !== "/") {
+    this.$router.push({ path: "/", hash: "#Services" });
+  } else {
+    document.getElementById("Services").scrollIntoView({ behavior: "smooth" });
+  }
+};
+</script>
+
 <template>
   <header
     class="w-full bg-transparent backdrop-blur-xl fixed top-0 z-50 shadow-lg"
@@ -36,13 +46,13 @@
           Work
         </router-link>
         <router-link
-          to="/service"
+          @click="handleSubSection"
+          to="/#Services"
           class="text-light font-LibreBaskerville text-lg hover:text-opacity-80 transition"
         >
           Services
         </router-link>
       </nav>
-
       <!-- Call-to-Action Link -->
       <router-link
         to="/contact"

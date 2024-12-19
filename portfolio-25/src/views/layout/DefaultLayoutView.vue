@@ -8,7 +8,9 @@ import FooterView from "@/components/footer/FooterView.vue";
     <HeaderView />
     <!-- main area -->
     <main>
-      <div class="bg-dark max-w-screen-2xl  flex flex-col gap-[120px]">
+      <div
+        class="bg-dark max-w-screen-2xl flex flex-col gap-[120px] "
+      >
         <slot></slot>
       </div>
     </main>
