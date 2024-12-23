@@ -167,8 +167,8 @@ const toggleDropdown = (id) => {
                       :key="openStates.get(exp.id) ? 'minus' : 'plus'"
                       :src="
                         openStates.get(exp.id)
-                          ? '/src/assets/icon/light-minus.svg'
-                          : '/src/assets/icon/light-plus.svg'
+                          ? './src/assets/icon/light-minus.svg'
+                          : './src/assets/icon/light-plus.svg'
                       "
                       alt=""
                       class="rounded-2xl p-1 md:p-0 w-12 md:w-14 h-10 md:h-11 bg-light/90 backdrop-blur-xl border-2 border-grayMist transform transition-all duration-500 hover:scale-105"
