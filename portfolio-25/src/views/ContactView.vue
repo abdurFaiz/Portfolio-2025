@@ -1,5 +1,43 @@
 <script setup>
 import DefaultLayoutView from "./layout/DefaultLayoutView.vue";
+import { ref } from "vue";
+import emailjs from '@emailjs/browser';
+
+const fullname = ref("");
+const email = ref("");
+const message = ref("");
+const isLoading = ref(false);
+
+const sendEmail = async () => {
+  try {
+    isLoading.value = true;
+
+    const templateParams = {
+      to_email: "fabdurrahman904@gmail.com",
+      from_name: fullname.value,
+      from_email: email.value,
+      message: message.value,
+    };
+
+    await emailjs.send(
+      "service_7vp42sk0423",
+      "template_c94hs4j",
+      templateParams,
+      "5DAG-pyCI9LMEAWYT"
+    );
+
+    fullname.value = "";
+    email.value = "";
+    message.value = "";
+
+    alert("Email sent successfully");
+  } catch (err) {
+    console.error("error sending email", err);
+    alert("Failed to send message. Please try again.");
+  } finally {
+    isLoading.value = false;
+  }
+};
 </script>
 
 <template>
@@ -8,12 +46,12 @@ import DefaultLayoutView from "./layout/DefaultLayoutView.vue";
       <div class="h-screen">
         <div class="relative">
           <h1
-            class="font-LibreBaskerville text-5xl md:text-8xl text-light text-center"
+            class="font-LibreBaskerville text-5xl md:text-9xl text-light text-center"
           >
             Drop me a message
           </h1>
           <div
-            class="absolute flex flex-col gap-6 md:gap-8 p-4 md:p-8 bg-gradient-to-r from-greyDark/50 to-greyCardDard/50 backdrop-blur-md rounded-3xl top-8 md:top-16"
+            class="absolute flex flex-col gap-6 md:gap-8 p-4 md:p-8 bg-gradient-to-r from-greyDark/50 to-greyCardDard/50 backdrop-blur-md rounded-3xl top-20 md:top-24"
           >
             <div
               class="flex flex-col md:flex-row justify-between gap-14 md:gap-32"
@@ -30,6 +68,7 @@ import DefaultLayoutView from "./layout/DefaultLayoutView.vue";
                       >Full Name</label
                     >
                     <input
+                      v-model="fullname"
                       type="text"
                       id="fullname"
                       class="border-b-2 border-light"
@@ -39,6 +78,7 @@ import DefaultLayoutView from "./layout/DefaultLayoutView.vue";
                   <div class="flex flex-col gap-2">
                     <label for="email" class="text-light text-2xl">Email</label>
                     <input
+                      v-model="email"
                       type="email"
                       id="email"
                       class="border-b-2 border-light"
@@ -51,6 +91,7 @@ import DefaultLayoutView from "./layout/DefaultLayoutView.vue";
                     >Anything about your project</label
                   >
                   <textarea
+                    v-model="message"
                     name="textarea"
                     id="textarea"
                     cols="10"
@@ -65,9 +106,11 @@ import DefaultLayoutView from "./layout/DefaultLayoutView.vue";
                 GET IN TOUCH
               </h3>
               <button
+                @click="sendEmail"
+                :disabled="isLoading"
                 class="text-2xl text-light p-3 bg-gradient-to-r from-greyDark to-greyCardDard rounded-xl"
               >
-                SUBMIT
+                {{ isLoading ? "SENDING..." : "SUBMIT" }}
               </button>
             </div>
           </div>

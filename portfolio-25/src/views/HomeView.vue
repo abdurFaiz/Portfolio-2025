@@ -59,7 +59,7 @@ gsap.registerPlugin(ScrollTrigger);
             Hi👋, I'm
           </h2>
           <img
-            class="w-20 md:w-32"
+            class="w-20 md:w-32 transform transition-all duration-700 ease-in-out hover:scale-150"
             src="/src/assets/image/hero-img-sm.png"
             alt="Hero Image"
           />
@@ -78,7 +78,7 @@ gsap.registerPlugin(ScrollTrigger);
             Indonesian
           </h2>
           <img
-            class="w-20 md:w-32"
+            class="w-20 md:w-32 transform transition-all duration-700 ease-in-out hover:scale-150"
             src="/src/assets/image/indonesian.png"
             alt="Indonesian Flag"
           />
@@ -97,7 +97,7 @@ gsap.registerPlugin(ScrollTrigger);
             UIX Designer
           </h2>
           <img
-            class="w-20 md:w-32"
+            class="w-20 md:w-32 transform transition-all duration-700 ease-in-out hover:scale-150"
             src="/src/assets/image/activity.png"
             alt="Activity Icon"
           />
@@ -119,7 +119,7 @@ gsap.registerPlugin(ScrollTrigger);
       </div>
     </section>
     <!-- work section -->
-    <section id="work" class="px-4 md:px-16">
+    <section id="works" class="px-4 md:px-16">
       <div class="flex flex-col gap-16">
         <h2 class="text-4xl md:text-[56px] font-LibreBaskerville text-light">
           Recently Work
@@ -136,10 +136,14 @@ gsap.registerPlugin(ScrollTrigger);
               />
               <div class="absolute top-4 left-4 sm:top-6 sm:left-6">
                 <div class="flex flex-wrap gap-2 sm:gap-3">
-                  <div class="px-2 py-1 rounded-full bg-grayMist">
+                  <div
+                    class="px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
+                  >
                     <p class="text-xs sm:text-sm text-light">CASE STUDY</p>
                   </div>
-                  <div class="px-2 py-1 rounded-full bg-grayMist">
+                  <div
+                    class="px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
+                  >
                     <p class="text-xs sm:text-sm text-light">WEBSITE</p>
                   </div>
                 </div>
@@ -161,10 +165,10 @@ gsap.registerPlugin(ScrollTrigger);
               </p>
               <router-link
                 to="/sentry-project"
-                class="text-light text-base md:text-xl leading-7 flex items-center"
+                class="text-light text-base md:text-xl leading-7 gap-1 flex items-center hover:px-3 hover:py-[6px] hover:rounded-full hover:bg-greyDark w-fit hover:shadow-xl hover:shadow-indigo-50/10 transform transition-all duration-500 ease-in-out"
               >
                 VIEW
-                <img src="/src/assets/icon/thin-arrow-up.svg" alt="" />
+                <img src="/src/assets/icon/thin-arrow-right.svg" alt="" />
               </router-link>
             </div>
           </div>
@@ -188,24 +192,28 @@ gsap.registerPlugin(ScrollTrigger);
               </p>
               <router-link
                 to="/sentry-project"
-                class="text-light text-base md:text-xl leading-7 flex items-center"
+                class="text-light text-base md:text-xl leading-7 flex gap-1 items-center hover:px-3 hover:py-[6px] hover:rounded-full hover:bg-greyDark w-fit hover:shadow-xl hover:shadow-indigo-50/10 transform transition-all duration-500 ease-in-out"
               >
                 VIEW
-                <img src="/src/assets/icon/thin-arrow-up.svg" alt="" />
+                <img src="/src/assets/icon/thin-arrow-right.svg" alt="" />
               </router-link>
             </div>
-            <div class="relative rounded-2xl overflow-hidden ">
+            <div class="relative rounded-2xl overflow-hidden">
               <img
                 src="/src/assets/image/SIPA.png"
                 alt=""
-                class="object-cover h-auto w-full "
+                class="object-cover h-auto w-full"
               />
               <div class="absolute top-6 left-6">
                 <div class="flex gap-3">
-                  <div class="w-fit px-2 py-1 rounded-full bg-grayMist">
+                  <div
+                    class="w-fit px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
+                  >
                     <p class="text-light text-sm">CASE STUDY</p>
                   </div>
-                  <div class="w-fit px-2 py-1 rounded-full bg-grayMist">
+                  <div
+                    class="w-fit px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
+                  >
                     <p class="text-light text-sm">WEBSITE</p>
                   </div>
                 </div>
@@ -223,10 +231,14 @@ gsap.registerPlugin(ScrollTrigger);
               />
               <div class="absolute top-6 left-6">
                 <div class="flex gap-3">
-                  <div class="w-fit px-2 py-1 rounded-full bg-grayMist">
+                  <div
+                    class="w-fit px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
+                  >
                     <p class="text-light text-sm">CASE STUDY</p>
                   </div>
-                  <div class="w-fit px-2 py-1 rounded-full bg-grayMist">
+                  <div
+                    class="w-fit px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
+                  >
                     <p class="text-light text-sm">MOBILE</p>
                   </div>
                 </div>
@@ -246,11 +258,11 @@ gsap.registerPlugin(ScrollTrigger);
                 educational path and career
               </p>
               <router-link
-                to="/sentry-project"
-                class="text-light text-base md:text-xl leading-7 flex items-center"
+                to="/work/whats-next-case-study"
+                class="text-light text-base md:text-xl leading-7 flex gap-1 items-center hover:px-3 hover:py-[6px] hover:rounded-full hover:bg-greyDark w-fit hover:shadow-xl hover:shadow-indigo-50/10 transform transition-all duration-500 ease-in-out"
               >
                 VIEW
-                <img src="/src/assets/icon/thin-arrow-up.svg" alt="" />
+                <img src="/src/assets/icon/thin-arrow-right.svg" alt="" />
               </router-link>
             </div>
           </div>
@@ -276,7 +288,7 @@ gsap.registerPlugin(ScrollTrigger);
             />
           </routee-link>
         </div>
-        <div class="flex gap-6 flex-row overflow-x-auto">
+        <div class="flex gap-6 flex-row overflow-x-auto overflow-hidden">
           <div class="flex flex-col gap-4 max-w-md">
             <img
               src="/src/assets/image/Dont-Explore.png"
@@ -380,11 +392,12 @@ gsap.registerPlugin(ScrollTrigger);
                 <router-link
                   class="font-bold text-light rounded-xl bg-gradient-to-t from-grayMist to-greyCardDard p-[1.5px]"
                 >
-                  <div
+                  <router-link
+                    to="/contact"
                     class="flex size-full items-center rounded-xl justify-center bg-dark/85 px-6 py-3"
                   >
                     GET IN TOUCH
-                  </div>
+                  </router-link>
                 </router-link>
               </div>
             </div>
@@ -429,11 +442,12 @@ gsap.registerPlugin(ScrollTrigger);
                   <router-link
                     class="font-bold text-light rounded-xl bg-gradient-to-t from-grayMist to-greyCardDard p-[1.5px]"
                   >
-                    <div
+                    <router-link
+                      to="/contact"
                       class="flex size-full items-center rounded-xl justify-center bg-dark/85 px-6 py-3"
                     >
                       GET IN TOUCH
-                    </div>
+                    </router-link>
                   </router-link>
                 </div>
               </div>
@@ -462,11 +476,12 @@ gsap.registerPlugin(ScrollTrigger);
                   <router-link
                     class="font-bold text-light rounded-xl bg-gradient-to-t from-grayMist to-greyCardDard p-[1.5px]"
                   >
-                    <div
+                    <router-link
+                      to="/contact"
                       class="flex size-full items-center rounded-xl justify-center bg-dark/85 px-6 py-3"
                     >
                       GET IN TOUCH
-                    </div>
+                    </router-link>
                   </router-link>
                 </div>
               </div>
@@ -476,7 +491,7 @@ gsap.registerPlugin(ScrollTrigger);
       </div>
     </section>
     <!-- why work with me -->
-    <section id="workwithme">
+    <section id="workwithme" class="dark:bg-light">
       <div
         class="flex flex-col md:flex-row justify-between gap-6 bg-light px-4 md:px-16 py-20 md:py-32"
       >
