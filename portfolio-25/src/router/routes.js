@@ -12,7 +12,7 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/hello",
+    path: "/about",
     name: "about",
     component: AboutView,
   },

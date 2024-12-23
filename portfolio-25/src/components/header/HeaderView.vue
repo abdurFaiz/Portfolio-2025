@@ -54,11 +54,11 @@ const handleSubSection = () => {
                 Home
               </span>
             </router-link>
-            <router-link to="/hello">
+            <router-link to="/about">
               <span
                 class="relative bg-gradient-to-t text-transparent bg-clip-text from-greyDark to-accent font-LibreBaskerville text-[52px] md:text-xl transition-all duration-300 ease-in-out hover:text-opacity-80 hover:contrast-125 active:text-accent"
               >
-                Hello
+                About
               </span>
             </router-link>
           </div>
