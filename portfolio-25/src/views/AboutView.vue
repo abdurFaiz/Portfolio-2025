@@ -1,5 +1,7 @@
 <script setup>
 import DefaultLayoutView from "./layout/DefaultLayoutView.vue";
+import lightPlus from "@/assets/icon/light-plus.svg";
+import lightMinus from "@/assets/icon/light-minus.svg";
 import { ref } from "vue";
 
 // Create an array of work experiences
@@ -165,9 +167,7 @@ const toggleDropdown = (id) => {
                   <transition name="fade" mode="out-in">
                     <img
                       :key="openStates.get(exp.id) ? 'minus' : 'plus'"
-                      :src="`src/assets/icon/${
-                        openStates.get(exp.id) ? 'light-minus' : 'light-plus'
-                      }.svg`"
+                      :src="openStates.get(exp.id) ? lightMinus : lightPlus"
                       alt=""
                       class="rounded-2xl p-1 md:p-0 w-12 md:w-14 h-10 md:h-11 bg-light/90 backdrop-blur-xl border-2 border-grayMist transform transition-all duration-500 hover:scale-105"
                     />
