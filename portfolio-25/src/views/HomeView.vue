@@ -30,7 +30,7 @@ gsap.registerPlugin(ScrollTrigger);
             <h1
               class="font-LibreBaskerville text-[40px] md:text-7xl text-light"
             >
-              UI/UX Designer
+              UIX Designer
             </h1>
           </div>
           <p class="text-2xl leading-8 text-light">
