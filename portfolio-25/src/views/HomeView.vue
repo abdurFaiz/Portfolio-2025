@@ -440,16 +440,16 @@ gsap.registerPlugin(ScrollTrigger);
                       class="w-16"
                     />
                   </div>
-                  <router-link
+                  <div
                     class="font-bold text-light rounded-xl bg-gradient-to-t from-grayMist to-greyCardDard p-[1.5px]"
                   >
-                    <router-link
-                      to="/contact"
+                    <a
+                      href="/contact"
                       class="flex size-full items-center rounded-xl justify-center bg-dark/85 px-6 py-3"
                     >
                       GET IN TOUCH
-                    </router-link>
-                  </router-link>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -474,16 +474,16 @@ gsap.registerPlugin(ScrollTrigger);
                   <div class="flex flex-row gap-4">
                     <img src="/src/assets/icon/figma.svg" alt="" class="w-16" />
                   </div>
-                  <router-link
+                  <div
                     class="font-bold text-light rounded-xl bg-gradient-to-t from-grayMist to-greyCardDard p-[1.5px]"
                   >
-                    <router-link
-                      to="/contact"
+                    <a
+                      href="/contact"
                       class="flex size-full items-center rounded-xl justify-center bg-dark/85 px-6 py-3"
                     >
                       GET IN TOUCH
-                    </router-link>
-                  </router-link>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
