@@ -390,16 +390,16 @@ gsap.registerPlugin(ScrollTrigger);
                   a seamless experience that evolves with your goals.
                 </p>
 
-                <router-link
+                <div
                   class="font-bold text-light rounded-xl bg-gradient-to-t from-grayMist to-greyCardDard p-[1.5px]"
                 >
-                <router-link
-                    to="/contact"
+                  <a
+                    href="/contact"
                     class="flex size-full items-center rounded-xl justify-center bg-dark/85 px-6 py-3"
                   >
                     GET IN TOUCH
-                  </router-link>
-                </router-link>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -443,7 +443,7 @@ gsap.registerPlugin(ScrollTrigger);
                   <router-link
                     class="font-bold text-light rounded-xl bg-gradient-to-t from-grayMist to-greyCardDard p-[1.5px]"
                   >
-                  <router-link
+                    <router-link
                       to="/contact"
                       class="flex size-full items-center rounded-xl justify-center bg-dark/85 px-6 py-3"
                     >
@@ -477,7 +477,7 @@ gsap.registerPlugin(ScrollTrigger);
                   <router-link
                     class="font-bold text-light rounded-xl bg-gradient-to-t from-grayMist to-greyCardDard p-[1.5px]"
                   >
-                  <router-link
+                    <router-link
                       to="/contact"
                       class="flex size-full items-center rounded-xl justify-center bg-dark/85 px-6 py-3"
                     >
