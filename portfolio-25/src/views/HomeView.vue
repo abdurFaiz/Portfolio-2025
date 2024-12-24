@@ -567,4 +567,12 @@ gsap.registerPlugin(ScrollTrigger);
 </template>
 
 <style scoped>
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
 </style>
