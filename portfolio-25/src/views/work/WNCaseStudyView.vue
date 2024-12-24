@@ -465,7 +465,7 @@ const scrollToSection = (sectionId) => {
           <!-- Sticky Navigation -->
           <div
     v-show="isNavVisible"
-    class="fixed right-16 top-24 hidden md:flex flex-col gap-6 max-w-60 w-full transition-opacity duration-300"
+    class="fixed right-16 top-24 hidden md:flex flex-col  gap-6 max-w-48 w-full transition-opacity duration-300"
     :class="{ 'opacity-100': isNavVisible, 'opacity-0': !isNavVisible }"
   >
     <p class="text-grayMist text-base">On This Page</p>
@@ -536,6 +536,5 @@ const scrollToSection = (sectionId) => {
 <style scoped>
 .fixed {
   position: fixed;
-  z-index: 40;
 }
 </style>
