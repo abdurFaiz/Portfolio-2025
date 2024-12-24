@@ -2,6 +2,7 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import DefaultLayoutView from "./layout/DefaultLayoutView.vue";
+import { RouterLink } from "vue-router";
 import { onMounted } from "vue";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -392,7 +393,7 @@ gsap.registerPlugin(ScrollTrigger);
                 <router-link
                   class="font-bold text-light rounded-xl bg-gradient-to-t from-grayMist to-greyCardDard p-[1.5px]"
                 >
-                  <router-link
+                <router-link
                     to="/contact"
                     class="flex size-full items-center rounded-xl justify-center bg-dark/85 px-6 py-3"
                   >
@@ -442,7 +443,7 @@ gsap.registerPlugin(ScrollTrigger);
                   <router-link
                     class="font-bold text-light rounded-xl bg-gradient-to-t from-grayMist to-greyCardDard p-[1.5px]"
                   >
-                    <router-link
+                  <router-link
                       to="/contact"
                       class="flex size-full items-center rounded-xl justify-center bg-dark/85 px-6 py-3"
                     >
@@ -476,7 +477,7 @@ gsap.registerPlugin(ScrollTrigger);
                   <router-link
                     class="font-bold text-light rounded-xl bg-gradient-to-t from-grayMist to-greyCardDard p-[1.5px]"
                   >
-                    <router-link
+                  <router-link
                       to="/contact"
                       class="flex size-full items-center rounded-xl justify-center bg-dark/85 px-6 py-3"
                     >
