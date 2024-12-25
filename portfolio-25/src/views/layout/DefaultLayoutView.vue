@@ -71,7 +71,7 @@ const toggleScroll = (shouldEnable) => {
         <HeaderView />
         <!-- main area -->
         <main>
-          <div class="bg-dark flex flex-col gap-[120px] mx-auto w-full">
+          <div class="bg-dark flex flex-col gap-20 md:gap-[120px] mx-auto w-full">
             <slot></slot>
           </div>
         </main>
