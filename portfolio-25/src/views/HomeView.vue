@@ -40,6 +40,7 @@ gsap.registerPlugin(ScrollTrigger);
         </div>
         <div class="hero-image">
           <img
+            loading="lazy"
             src="/src/assets/image/hero-img-xl.png"
             alt="Hero Image"
             class="rounded-2xl w-full h-full object-cover"
@@ -60,6 +61,7 @@ gsap.registerPlugin(ScrollTrigger);
             Hi👋, I'm
           </h2>
           <img
+            loading="lazy"
             class="w-20 md:w-32 transform transition-all duration-700 ease-in-out hover:scale-150"
             src="/src/assets/image/hero-img-sm.png"
             alt="Hero Image"
@@ -79,6 +81,7 @@ gsap.registerPlugin(ScrollTrigger);
             Indonesian
           </h2>
           <img
+            loading="lazy"
             class="w-20 md:w-32 transform transition-all duration-700 ease-in-out hover:scale-150"
             src="/src/assets/image/indonesian.png"
             alt="Indonesian Flag"
@@ -98,6 +101,7 @@ gsap.registerPlugin(ScrollTrigger);
             UIX Designer
           </h2>
           <img
+            loading="lazy"
             class="w-20 md:w-32 transform transition-all duration-700 ease-in-out hover:scale-150"
             src="/src/assets/image/activity.png"
             alt="Activity Icon"
@@ -131,6 +135,7 @@ gsap.registerPlugin(ScrollTrigger);
           >
             <div class="relative rounded-2xl overflow-hidden">
               <img
+                loading="lazy"
                 src="/src/assets/image/VarXSentry.png"
                 alt="VarXSentry Case Study"
                 class="object-cover w-full h-auto"
@@ -169,7 +174,11 @@ gsap.registerPlugin(ScrollTrigger);
                 class="text-light text-base md:text-xl leading-7 gap-1 flex items-center hover:px-3 hover:py-[6px] hover:rounded-full hover:bg-greyDark w-fit hover:shadow-xl hover:shadow-indigo-50/10 transform transition-all duration-500 ease-in-out"
               >
                 VIEW
-                <img src="/src/assets/icon/thin-arrow-right.svg" alt="" />
+                <img
+                  loading="lazy"
+                  src="/src/assets/icon/thin-arrow-right.svg"
+                  alt=""
+                />
               </router-link>
             </div>
           </div>
@@ -197,11 +206,16 @@ gsap.registerPlugin(ScrollTrigger);
                 class="text-light text-base md:text-xl leading-7 flex gap-1 items-center hover:px-3 hover:py-[6px] hover:rounded-full hover:bg-greyDark w-fit hover:shadow-xl hover:shadow-indigo-50/10 transform transition-all duration-500 ease-in-out"
               >
                 VIEW
-                <img src="/src/assets/icon/thin-arrow-right.svg" alt="" />
+                <img
+                  loading="lazy"
+                  src="/src/assets/icon/thin-arrow-right.svg"
+                  alt=""
+                />
               </router-link>
             </div>
             <div class="relative rounded-2xl overflow-hidden">
               <img
+                loading="lazy"
                 src="/src/assets/image/SIPA.png"
                 alt=""
                 class="object-cover h-auto w-full"
@@ -227,6 +241,7 @@ gsap.registerPlugin(ScrollTrigger);
           >
             <div class="relative rounded-2xl overflow-hidden">
               <img
+                loading="lazy"
                 src="/src/assets/image/WhatsNext.png"
                 alt=""
                 class="object-cover w-full h-auto"
@@ -264,7 +279,11 @@ gsap.registerPlugin(ScrollTrigger);
                 class="text-light text-base md:text-xl leading-7 flex gap-1 items-center hover:px-3 hover:py-[6px] hover:rounded-full hover:bg-greyDark w-fit hover:shadow-xl hover:shadow-indigo-50/10 transform transition-all duration-500 ease-in-out"
               >
                 VIEW
-                <img src="/src/assets/icon/thin-arrow-right.svg" alt="" />
+                <img
+                  loading="lazy"
+                  src="/src/assets/icon/thin-arrow-right.svg"
+                  alt=""
+                />
               </router-link>
             </div>
           </div>
@@ -284,6 +303,7 @@ gsap.registerPlugin(ScrollTrigger);
           >
             VIEW ALL
             <img
+              loading="lazy"
               src="/src/assets/icon/thin-arrow-up.svg"
               alt=""
               class="size-9"
@@ -293,6 +313,7 @@ gsap.registerPlugin(ScrollTrigger);
         <div class="flex gap-6 flex-row overflow-x-auto overflow-hidden">
           <div class="flex flex-col gap-4 max-w-md">
             <img
+              loading="lazy"
               src="/src/assets/image/Dont-Explore.png"
               alt=""
               class="max-w-96 rounded-2xl"
@@ -309,6 +330,7 @@ gsap.registerPlugin(ScrollTrigger);
           </div>
           <div class="flex flex-col gap-4 max-w-md">
             <img
+              loading="lazy"
               src="/src/assets/image/Fitns-Explore.png"
               alt=""
               class="max-w-96 rounded-2xl"
@@ -325,6 +347,7 @@ gsap.registerPlugin(ScrollTrigger);
           </div>
           <div class="flex flex-col gap-4 max-w-md">
             <img
+              loading="lazy"
               src="/src/assets/image/Dive-Explore.png"
               alt=""
               class="max-w-96 rounded-2xl"
@@ -364,16 +387,19 @@ gsap.registerPlugin(ScrollTrigger);
                 </h4>
                 <div class="flex flex-col gap-4">
                   <img
+                    loading="lazy"
                     src="/src/assets/icon/react.svg"
                     alt=""
                     class="w-16 ml-32"
                   />
                   <img
+                    loading="lazy"
                     src="/src/assets/icon/vuejs.svg"
                     alt=""
                     class="w-16 ml-24"
                   />
                   <img
+                    loading="lazy"
                     src="/src/assets/icon/nextjs.svg"
                     alt=""
                     class="w-16 ml-12"
@@ -426,16 +452,19 @@ gsap.registerPlugin(ScrollTrigger);
                   </div>
                   <div class="flex flex-row gap-4">
                     <img
+                      loading="lazy"
                       src="/src/assets/icon/framer.svg"
                       alt=""
                       class="w-10"
                     />
                     <img
+                      loading="lazy"
                       src="/src/assets/icon/webflow.svg"
                       alt=""
                       class="w-16"
                     />
                     <img
+                      loading="lazy"
                       src="/src/assets/icon/elementor.svg"
                       alt=""
                       class="w-16"
@@ -473,7 +502,12 @@ gsap.registerPlugin(ScrollTrigger);
                     </p>
                   </div>
                   <div class="flex flex-row gap-4">
-                    <img src="/src/assets/icon/figma.svg" alt="" class="w-16" />
+                    <img
+                      loading="lazy"
+                      src="/src/assets/icon/figma.svg"
+                      alt=""
+                      class="w-16"
+                    />
                   </div>
                   <div
                     class="font-bold text-light rounded-xl bg-gradient-to-t from-grayMist to-greyCardDard p-[1.5px]"

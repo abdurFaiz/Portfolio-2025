@@ -54,6 +54,7 @@ const toggleDropdown = (id) => {
         <div class="flex flex-col items-center gap-12 md:gap-32">
           <div class="flex flex-col items-center relative">
             <img
+            loading="lazy"
               src="/src/assets/image/profile-img.png"
               alt=""
               class="max-w-64 md:max-w-md h-auto"
@@ -166,6 +167,7 @@ const toggleDropdown = (id) => {
                   <!-- Transition for icon switch -->
                   <transition name="fade" mode="out-in">
                     <img
+                    loading="lazy"
                       :key="openStates.get(exp.id) ? 'minus' : 'plus'"
                       :src="openStates.get(exp.id) ? lightMinus : lightPlus"
                       alt=""

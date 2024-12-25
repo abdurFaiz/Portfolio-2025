@@ -127,7 +127,7 @@ const scrollToSection = (sectionId) => {
             </ul>
           </div>
           <div class="w-full h-full">
-            <img
+            <img loading="lazy"
               src="/src/assets/image/WhatsNext-Detail.png"
               alt=""
               class="object-cover w-full"
@@ -280,7 +280,7 @@ const scrollToSection = (sectionId) => {
                 <h4 class="text-grayMist uppercase text-base">
                   Design Process
                 </h4>
-                <img
+                <img loading="lazy"
                   src="/src/assets/image/Design-Process.png"
                   alt=""
                   class="object-cover w-full h-auto"
@@ -304,7 +304,7 @@ const scrollToSection = (sectionId) => {
                 <h4 class="text-grayMist uppercase text-base">
                   Design Activities Process
                 </h4>
-                <img
+                <img loading="lazy"
                   src="/src/assets/image/detail-process.png"
                   alt=""
                   class="object-cover w-full h-auto"
@@ -327,7 +327,7 @@ const scrollToSection = (sectionId) => {
                 <h4 class="text-grayMist uppercase text-base">
                   Insight Research
                 </h4>
-                <img
+                <img loading="lazy"
                   src="/src/assets/image/data-research.png"
                   alt=""
                   class="object-cover w-full h-auto"
@@ -491,7 +491,7 @@ const scrollToSection = (sectionId) => {
         <h4 class="font-LibreBaskerville text-light text-3xl md:text-6xl">Next Project</h4>
         <div class="flex flex-col gap-4 max-w-xl">
           <div class="flex flex-col gap-4 relative">
-            <img src="/src/assets/image/VarXSentry.png" alt="" class="max-w-xl h-auto w-full rounded-2xl">
+            <img loading="lazy" src="/src/assets/image/VarXSentry.png" alt="" class="max-w-xl h-auto w-full rounded-2xl">
             <div class="absolute top-3 left-3  md:top-6 md:left-6">
                   <div class="flex gap-3">
                     <div
@@ -524,7 +524,7 @@ const scrollToSection = (sectionId) => {
                 class="text-light text-base md:text-lg leading-7 gap-1 flex items-center hover:px-3 hover:py-[6px] hover:rounded-full hover:bg-greyDark w-fit hover:shadow-xl hover:shadow-indigo-50/10 transform transition-all duration-500 ease-in-out"
               >
                 VIEW
-                <img src="/src/assets/icon/thin-arrow-right.svg" width="24px" alt="" />
+                <img loading="lazy" src="/src/assets/icon/thin-arrow-right.svg" width="24px" alt="" />
               </router-link>
         </div>
       </div>
