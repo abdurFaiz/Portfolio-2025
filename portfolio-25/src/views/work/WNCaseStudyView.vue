@@ -520,7 +520,7 @@ const scrollToSection = (sectionId) => {
               </p>
           </div>
           <router-link
-                to="/sentry-project"
+                to="/integrator-web-case-study"
                 class="text-light text-base md:text-lg leading-7 gap-1 flex items-center hover:px-3 hover:py-[6px] hover:rounded-full hover:bg-greyDark w-fit hover:shadow-xl hover:shadow-indigo-50/10 transform transition-all duration-500 ease-in-out"
               >
                 VIEW

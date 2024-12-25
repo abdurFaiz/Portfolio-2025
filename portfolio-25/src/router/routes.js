@@ -5,6 +5,7 @@ import FunView from "@/views/FunView.vue";
 import NotFoundView from "@/views/error/404View.vue";
 import WNCaseStudyView from "@/views/work/WNCaseStudyView.vue";
 import FWSipaView from "@/views/work/FWSipaView.vue";
+import FEGmedView from "@/views/work/FEGmedView.vue";
 
 const routes = [
   {
@@ -41,6 +42,11 @@ const routes = [
     path: "/sipa-new-face",
     name: "sipa-new-face",
     component: FWSipaView,
+  },
+  {
+    path: "/integrator-web-case-study",
+    name: "integrator-web-case-study",
+    component: FEGmedView,
   },
 ];
 

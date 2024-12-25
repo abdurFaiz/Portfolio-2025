@@ -160,7 +160,7 @@ gsap.registerPlugin(ScrollTrigger);
               <h3
                 class="text-[32px] md:text-[40px] font-LibreBaskerville text-light"
               >
-                Sentry Error Monitoring Integration
+              Real-Time Error Tracking with Sentry Integration
               </h3>
               <p
                 class="text-grayMist text-base md:text-xl leading-7 line-clamp-3"
@@ -170,7 +170,7 @@ gsap.registerPlugin(ScrollTrigger);
                 resolution, enhancing system reliability
               </p>
               <router-link
-                to="/sentry-project"
+                to="/integrator-web-case-study"
                 class="text-light text-base md:text-xl leading-7 gap-1 flex items-center hover:px-3 hover:py-[6px] hover:rounded-full hover:bg-greyDark w-fit hover:shadow-xl hover:shadow-indigo-50/10 transform transition-all duration-500 ease-in-out"
               >
                 VIEW

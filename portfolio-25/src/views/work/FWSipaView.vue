@@ -109,7 +109,8 @@ const scrollToSection = (sectionId) => {
             </ul>
           </div>
           <div class="w-full h-full">
-            <img loading="lazy"
+            <img
+              loading="lazy"
               src="/src/assets/image/SIPA-PREV.png"
               alt=""
               class="object-cover w-full h-auto rounded-none md:rounded-l-2xl my-0 md:my-6 shadow-lg shadow-green-950/45"
@@ -228,7 +229,11 @@ const scrollToSection = (sectionId) => {
                     accessibility
                   </p>
                 </div>
-                <img loading="lazy" src="/src/assets/image/sipa-v1.png" alt="" />
+                <img
+                  loading="lazy"
+                  src="/src/assets/image/sipa-v1.png"
+                  alt=""
+                />
                 <div class="flex flex-col gap-4">
                   <p class="text-light text-xl flex flex-col">
                     <span class="text-grayMist uppercase text-base">
@@ -260,7 +265,11 @@ const scrollToSection = (sectionId) => {
                     usability for a more inclusive and engaging experience
                   </p>
                 </div>
-                <img loading="lazy" src="/src/assets/image/sipa-after.png" alt="" />
+                <img
+                  loading="lazy"
+                  src="/src/assets/image/sipa-after.png"
+                  alt=""
+                />
                 <div class="flex flex-col gap-0 md:gap-4 px-0 md:px-6">
                   <h5
                     class="text-light font-LibreBaskerville text-xl md:text-[28px]"
@@ -326,8 +335,16 @@ const scrollToSection = (sectionId) => {
                   </p>
                 </div>
                 <div class="flex flex-col gap-6 w-full">
-                  <img loading="lazy" src="/src/assets/image/analy-cn.png" alt="" />
-                  <img loading="lazy" src="/src/assets/image/analy-user.png" alt="" />
+                  <img
+                    loading="lazy"
+                    src="/src/assets/image/analy-cn.png"
+                    alt=""
+                  />
+                  <img
+                    loading="lazy"
+                    src="/src/assets/image/analy-user.png"
+                    alt=""
+                  />
                 </div>
                 <div class="flex flex-col gap-4 px-0 md:px-6">
                   <h5
@@ -409,7 +426,8 @@ const scrollToSection = (sectionId) => {
           </h4>
           <div class="flex flex-col gap-4 max-w-xl">
             <div class="flex flex-col gap-4 relative">
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 src="/src/assets/image/WhatsNext.png"
                 alt=""
                 class="max-w-xl h-auto w-full rounded-2xl"
@@ -444,7 +462,8 @@ const scrollToSection = (sectionId) => {
               class="text-light text-base md:text-lg leading-7 gap-1 flex items-center hover:px-3 hover:py-[6px] hover:rounded-full hover:bg-greyDark w-fit hover:shadow-xl hover:shadow-indigo-50/10 transform transition-all duration-500 ease-in-out"
             >
               VIEW
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 src="/src/assets/icon/thin-arrow-right.svg"
                 width="24px"
                 alt=""
