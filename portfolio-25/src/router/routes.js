@@ -33,12 +33,12 @@ const routes = [
     component: NotFoundView,
   },
   {
-    path: "/work/whats-next-case-study",
+    path: "/whats-next-case-study",
     name: "whats-next-case-study",
     component: WNCaseStudyView,
   },
   {
-    path: "/work/sipa-new-face",
+    path: "/sipa-new-face",
     name: "sipa-new-face",
     component: FWSipaView,
   },

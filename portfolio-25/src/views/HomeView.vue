@@ -193,7 +193,7 @@ gsap.registerPlugin(ScrollTrigger);
                 SIPA’s position as a global hub for cultural expression.
               </p>
               <router-link
-                to="/work/sipa-new-face"
+                to="/sipa-new-face"
                 class="text-light text-base md:text-xl leading-7 flex gap-1 items-center hover:px-3 hover:py-[6px] hover:rounded-full hover:bg-greyDark w-fit hover:shadow-xl hover:shadow-indigo-50/10 transform transition-all duration-500 ease-in-out"
               >
                 VIEW
@@ -260,7 +260,7 @@ gsap.registerPlugin(ScrollTrigger);
                 educational path and career
               </p>
               <router-link
-                to="/work/whats-next-case-study"
+                to="/whats-next-case-study"
                 class="text-light text-base md:text-xl leading-7 flex gap-1 items-center hover:px-3 hover:py-[6px] hover:rounded-full hover:bg-greyDark w-fit hover:shadow-xl hover:shadow-indigo-50/10 transform transition-all duration-500 ease-in-out"
               >
                 VIEW

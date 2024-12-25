@@ -365,8 +365,12 @@ const scrollToSection = (sectionId) => {
                         expansion across the Asia-Pacific region</span
                       >
                     </li>
-                    <li class="text-light text-base md:text-xl px-4 py-2 rounded-xl bg-accent w-fit my-4">
-                      <a href="https://sipafestival.com/" target="_blank">Live Website</a>
+                    <li
+                      class="text-light text-base md:text-xl px-4 py-2 rounded-xl bg-accent w-fit my-4"
+                    >
+                      <a href="https://sipafestival.com/" target="_blank"
+                        >Live Website</a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -436,7 +440,7 @@ const scrollToSection = (sectionId) => {
               </p>
             </div>
             <router-link
-              to="/work/whats-next-case-study"
+              to="/whats-next-case-study"
               class="text-light text-base md:text-lg leading-7 gap-1 flex items-center hover:px-3 hover:py-[6px] hover:rounded-full hover:bg-greyDark w-fit hover:shadow-xl hover:shadow-indigo-50/10 transform transition-all duration-500 ease-in-out"
             >
               VIEW
