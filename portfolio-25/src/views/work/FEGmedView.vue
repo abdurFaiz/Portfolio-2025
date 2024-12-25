@@ -1,5 +1,72 @@
 <script setup>
 import DefaultLayoutView from "../layout/DefaultLayoutView.vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
+
+const activeSection = ref("overview");
+const isNavVisible = ref(false);
+
+const sections = [
+  {
+    id: "overview",
+    title: "Project Overview",
+  },
+  {
+    id: "problem",
+    title: "Problem",
+  },
+  {
+    id: "solution",
+    title: "Solution",
+  },
+  {
+    id: "result",
+    title: "Results",
+  },
+];
+
+const updateNavigation = () => {
+  // Get the boundary elements
+  const overviewSection = document.getElementById("overview");
+  const learnedSection = document.getElementById("result");
+
+  if (overviewSection && learnedSection) {
+    const overviewRect = overviewSection.getBoundingClientRect();
+    const learnedRect = learnedSection.getBoundingClientRect();
+
+    // Show nav when overview section top reaches viewport top and hide when learned section bottom passes viewport
+    isNavVisible.value = overviewRect.top <= 100 && learnedRect.bottom >= 0;
+
+    // Only update active section if nav is visible
+    if (isNavVisible.value) {
+      for (const section of sections) {
+        const element = document.getElementById(section.id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 0) {
+            activeSection.value = section.id;
+            break;
+          }
+        }
+      }
+    }
+  }
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", updateNavigation);
+  updateNavigation();
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", updateNavigation);
+});
+
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
 </script>
 
 <template>
@@ -184,9 +251,74 @@ import DefaultLayoutView from "../layout/DefaultLayoutView.vue";
                 </div>
               </div>
             </div>
+            <!-- result -->
+            <div
+              id="result"
+              class="p-4 md:py-20 md:px-20 rounded-3xl bg-greyDark flex flex-col md:flex-row"
+            >
+              <div class="flex flex-col gap-7 md:gap-10 w-full">
+                <div class="flex flex-col gap-4">
+                  <h4 class="text-grayMist uppercase text-base">Problem</h4>
+                  <p
+                    class="text-light font-LibreBaskerville text-2xl md:text-4xl leading-10"
+                  >
+                    The lack of a unified system to efficiently monitor and
+                    display errors across projects, requiring seamless
+                    integration between the error tracking platform (Sentry) and
+                    the project management website
+                  </p>
+                </div>
+                <img
+                  loading="lazy"
+                  src="/src/assets/image/problem.png"
+                  alt=""
+                />
+                <div class="flex flex-col gap-4">
+                  <p class="text-light text-xl flex flex-col">
+                    <span class="text-grayMist uppercase text-base">
+                      STRATEGY</span
+                    >
+                    Our approach focuses on user-centered design, integrating
+                    feedback from real users to guide the redesign. We aim to
+                    create a visually appealing, accessible, and functional
+                    platform with streamlined navigation and modern aesthetics,
+                    aligning with current UX/UI best practices to deliver an
+                    engaging experience for a diverse audience
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            v-show="isNavVisible"
+            class="fixed right-16 top-24 hidden md:flex flex-col gap-6 max-w-48 w-full transition-opacity duration-300"
+            :class="{ 'opacity-100': isNavVisible, 'opacity-0': !isNavVisible }"
+          >
+            <p class="text-grayMist text-base">On This Page</p>
+            <nav class="flex flex-col gap-2">
+              <button
+                v-for="section in sections"
+                :key="section.id"
+                @click="scrollToSection(section.id)"
+                :class="[
+                  'text-left px-4 py-2 rounded-md transition-all duration-500 transform',
+                  'hover:bg-greyDark hover:text-light',
+                  activeSection === section.id
+                    ? 'bg-greyDark text-light px-8 py-4'
+                    : 'text-grayMist',
+                ]"
+              >
+                {{ section.title }}
+              </button>
+            </nav>
           </div>
         </div>
       </div>
     </section>
   </DefaultLayoutView>
 </template>
+<style scoped>
+.fixed {
+  position: fixed;
+}
+</style>
