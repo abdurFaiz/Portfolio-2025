@@ -4,6 +4,7 @@ import ContactView from "@/views/ContactView.vue";
 import FunView from "@/views/FunView.vue";
 import NotFoundView from "@/views/error/404View.vue";
 import WNCaseStudyView from "@/views/work/WNCaseStudyView.vue";
+import FWSipaView from "@/views/work/FWSipaView.vue";
 
 const routes = [
   {
@@ -35,6 +36,11 @@ const routes = [
     path: "/work/whats-next-case-study",
     name: "whats-next-case-study",
     component: WNCaseStudyView,
+  },
+  {
+    path: "/work/sipa-new-face",
+    name: "sipa-new-face",
+    component: FWSipaView,
   },
 ];
 

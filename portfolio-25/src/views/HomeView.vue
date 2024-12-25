@@ -114,7 +114,7 @@ gsap.registerPlugin(ScrollTrigger);
           <h2
             class="text-light font-LibreBaskerville text-4xl md:text-5xl text-center"
           >
-            Technology industries
+            Technology Industries
           </h2>
         </div>
       </div>
@@ -135,7 +135,7 @@ gsap.registerPlugin(ScrollTrigger);
                 alt="VarXSentry Case Study"
                 class="object-cover w-full h-auto"
               />
-              <div class="absolute top-4 left-4 sm:top-6 sm:left-6">
+              <div class="absolute top-3 left-3 sm:top-6 sm:left-6">
                 <div class="flex flex-wrap gap-2 sm:gap-3">
                   <div
                     class="px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
@@ -185,14 +185,15 @@ gsap.registerPlugin(ScrollTrigger);
               <p
                 class="text-grayMist text-base md:text-xl leading-7 line-clamp-3"
               >
-                The Solo International Performing Arts (SIPA) Festival is an
-                annual event in Solo, Indonesia, showcasing diverse performances
-                from local and international artists. Since 2009, SIPA has
-                celebrated cultural expression through music, dance, and
-                theater.
+                The redesigned website for The Solo International Performing
+                Arts (SIPA) Festival transformed its digital presence,
+                showcasing vibrant cultural performances more effectively.
+                Within 30 days, the redesign drove over 2,000 new users and
+                achieved a remarkable 15,233% traffic increase, solidifying
+                SIPA’s position as a global hub for cultural expression.
               </p>
               <router-link
-                to="/sentry-project"
+                to="/work/sipa-new-face"
                 class="text-light text-base md:text-xl leading-7 flex gap-1 items-center hover:px-3 hover:py-[6px] hover:rounded-full hover:bg-greyDark w-fit hover:shadow-xl hover:shadow-indigo-50/10 transform transition-all duration-500 ease-in-out"
               >
                 VIEW
@@ -205,7 +206,7 @@ gsap.registerPlugin(ScrollTrigger);
                 alt=""
                 class="object-cover h-auto w-full"
               />
-              <div class="absolute top-6 left-6">
+              <div class="absolute top-3 left-3 md:top-6 md:left-6">
                 <div class="flex gap-3">
                   <div
                     class="w-fit px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
@@ -230,7 +231,7 @@ gsap.registerPlugin(ScrollTrigger);
                 alt=""
                 class="object-cover w-full h-auto"
               />
-              <div class="absolute top-6 left-6">
+              <div class="absolute top-3 left-3 md:top-6 md:left-6">
                 <div class="flex gap-3">
                   <div
                     class="w-fit px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
@@ -568,11 +569,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 <style scoped>
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;             /* Chrome, Safari, Opera */
+  display: none; /* Chrome, Safari, Opera */
 }
 </style>

@@ -90,7 +90,7 @@ const scrollToSection = (sectionId) => {
   <DefaultLayoutView>
     <section class="pt-16 md:pt-36">
       <div class="flex flex-col gap-12">
-        <div class="flex flex-col gap-1 px-4 md:px-16 max-w-4xl">
+        <div class="flex flex-col gap-1 px-4 md:px-16 max-w-4xl items-start">
           <h2
             class="font-LibreBaskerville text-[40px] md:text-[56px] text-light"
           >
@@ -180,7 +180,7 @@ const scrollToSection = (sectionId) => {
             </p>
           </div>
         </div>
-        <div class="flex flex-row gap-10 md:px-16 mx-6">
+        <div class="flex flex-row gap-10 md:px-16 px-4">
           <!-- Main content -->
           <div class="flex flex-col gap-16 max-w-4xl">
             <!-- Project Overview Section -->
@@ -193,7 +193,7 @@ const scrollToSection = (sectionId) => {
                   In 2045, Indonesia will enter its 'golden generation' with a
                   growing working-age population. To harness this potential and
                   achieve Sustainable Development Goals (SDGs), effective
-                  education and career planning are key.
+                  education and career planning are the keys.
                 </span>
                 <span
                   >Motivated by this need, I created a mobile platform focused
@@ -203,7 +203,6 @@ const scrollToSection = (sectionId) => {
                 >
               </p>
             </div>
-
             <!-- Problem Section -->
             <div
               id="problem"
@@ -464,36 +463,36 @@ const scrollToSection = (sectionId) => {
 
           <!-- Sticky Navigation -->
           <div
-    v-show="isNavVisible"
-    class="fixed right-16 top-24 hidden md:flex flex-col  gap-6 max-w-48 w-full transition-opacity duration-300"
-    :class="{ 'opacity-100': isNavVisible, 'opacity-0': !isNavVisible }"
-  >
-    <p class="text-grayMist text-base">On This Page</p>
-    <nav class="flex flex-col gap-2">
-      <button
-        v-for="section in sections"
-        :key="section.id"
-        @click="scrollToSection(section.id)"
-        :class="[
-          'text-left px-4 py-2 rounded-md transition-all duration-500 transform',
-          'hover:bg-greyDark hover:text-light',
-          activeSection === section.id 
-            ? 'bg-greyDark text-light px-8 py-4' 
-            : 'text-grayMist'
-        ]"
-      >
-        {{ section.title }}
-      </button>
-    </nav>
-  </div>
+              v-show="isNavVisible"
+              class="fixed right-16 top-24 hidden md:flex flex-col  gap-6 max-w-48 w-full transition-opacity duration-300"
+              :class="{ 'opacity-100': isNavVisible, 'opacity-0': !isNavVisible }"
+            >
+              <p class="text-grayMist text-base">On This Page</p>
+              <nav class="flex flex-col gap-2">
+                <button
+                  v-for="section in sections"
+                  :key="section.id"
+                  @click="scrollToSection(section.id)"
+                  :class="[
+                    'text-left px-4 py-2 rounded-md transition-all duration-500 transform',
+                    'hover:bg-greyDark hover:text-light',
+                    activeSection === section.id 
+                      ? 'bg-greyDark text-light px-8 py-4' 
+                      : 'text-grayMist'
+                  ]"
+                >
+               {{ section.title }}
+                  </button>
+              </nav>
         </div>
       </div>
-      <div class="flex flex-col md:flex-row gap-6 md:gap-10 px-6 md:px-32 justify-center ">
+      </div>
+      <div class="flex flex-col md:flex-row gap-6 md:gap-10 px-6 md:px-32 justify-center my-6 md:my-20">
         <h4 class="font-LibreBaskerville text-light text-3xl md:text-6xl">Next Project</h4>
         <div class="flex flex-col gap-4 max-w-xl">
           <div class="flex flex-col gap-4 relative">
             <img src="/src/assets/image/VarXSentry.png" alt="" class="max-w-xl h-auto w-full rounded-2xl">
-            <div class="absolute top-6 left-6">
+            <div class="absolute top-3 left-3  md:top-6 md:left-6">
                   <div class="flex gap-3">
                     <div
                       class="w-fit px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"

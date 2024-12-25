@@ -32,7 +32,7 @@ const handleSubSection = () => {
 
       <!-- Mobile Menu Button -->
       <button @click="menuToggle" class="md:hidden z-50" aria-label="Open Menu">
-        <img src="/src/assets/icon/menu-hamburger.svg" alt="Menu" />
+        <img src="/src/assets/icon/menu-hamburger.svg" alt="Menu" class="" />
       </button>
 
       <!-- Navigation Links -->
