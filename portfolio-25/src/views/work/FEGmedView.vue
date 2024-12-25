@@ -147,6 +147,43 @@ import DefaultLayoutView from "../layout/DefaultLayoutView.vue";
                 </p>
               </div>
             </div>
+            <!-- problem -->
+            <div
+              id="problem"
+              class="p-4 md:py-20 md:px-20 rounded-3xl bg-greyDark flex flex-col md:flex-row"
+            >
+              <div class="flex flex-col gap-7 md:gap-10 w-full">
+                <div class="flex flex-col gap-4">
+                  <h4 class="text-grayMist uppercase text-base">Problem</h4>
+                  <p
+                    class="text-light font-LibreBaskerville text-2xl md:text-4xl leading-10"
+                  >
+                    The lack of a unified system to efficiently monitor and
+                    display errors across projects, requiring seamless
+                    integration between the error tracking platform (Sentry) and
+                    the project management website
+                  </p>
+                </div>
+                <img
+                  loading="lazy"
+                  src="/src/assets/image/problem.png"
+                  alt=""
+                />
+                <div class="flex flex-col gap-4">
+                  <p class="text-light text-xl flex flex-col">
+                    <span class="text-grayMist uppercase text-base">
+                      STRATEGY</span
+                    >
+                    Our approach focuses on user-centered design, integrating
+                    feedback from real users to guide the redesign. We aim to
+                    create a visually appealing, accessible, and functional
+                    platform with streamlined navigation and modern aesthetics,
+                    aligning with current UX/UI best practices to deliver an
+                    engaging experience for a diverse audience
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
