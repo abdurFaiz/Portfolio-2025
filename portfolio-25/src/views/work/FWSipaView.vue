@@ -196,7 +196,7 @@ const scrollToSection = (sectionId) => {
             </div>
           </div>
         </div>
-        <div class="flex flex-row gap-10 md:px-16 mx-6">
+        <div class="flex flex-row gap-10 md:px-16 mx-6 mt-6 md:mt-32">
           <div class="flex flex-col gap-16 max-w-4xl">
             <!-- project overview -->
             <div id="overview" class="flex flex-col gap-3 max-w-3xl">

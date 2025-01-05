@@ -18,16 +18,12 @@ const sections = [
     id: "solution",
     title: "Solution",
   },
-  {
-    id: "result",
-    title: "Results",
-  },
 ];
 
 const updateNavigation = () => {
   // Get the boundary elements
   const overviewSection = document.getElementById("overview");
-  const learnedSection = document.getElementById("result");
+  const learnedSection = document.getElementById("solution");
 
   if (overviewSection && learnedSection) {
     const overviewRect = overviewSection.getBoundingClientRect();
@@ -190,7 +186,7 @@ const scrollToSection = (sectionId) => {
             </div>
           </div>
         </div>
-        <div class="flex flex-row gap-10 md:px-16 mx-6">
+        <div class="flex flex-row gap-10 md:px-16 mx-6 mt-6 md:mt-32">
           <div class="flex flex-col gap-16 max-w-4xl">
             <!-- project overview -->
             <div id="overview" class="flex flex-col gap-3 max-w-3xl">
@@ -239,38 +235,38 @@ const scrollToSection = (sectionId) => {
                 <div class="flex flex-col gap-4">
                   <p class="text-light text-xl flex flex-col">
                     <span class="text-grayMist uppercase text-base">
-                      STRATEGY</span
-                    >
-                    Our approach focuses on user-centered design, integrating
-                    feedback from real users to guide the redesign. We aim to
-                    create a visually appealing, accessible, and functional
-                    platform with streamlined navigation and modern aesthetics,
-                    aligning with current UX/UI best practices to deliver an
-                    engaging experience for a diverse audience
+                      identification
+                    </span>
+                    Issue and task management is a critical aspect of software
+                    development. The manual data transfer from Sentry to
+                    OpenProject is time-consuming and increases the risk of
+                    errors. An automated solution is required to optimize work
+                    efficiency, allowing teams to focus more on problem-solving
+                    and product innovation
                   </p>
                 </div>
               </div>
             </div>
-            <!-- result -->
+            <!-- solution -->
             <div
-              id="result"
+              id="solution"
               class="p-4 md:py-20 md:px-20 rounded-3xl bg-greyDark flex flex-col md:flex-row"
             >
               <div class="flex flex-col gap-7 md:gap-10 w-full">
                 <div class="flex flex-col gap-4">
-                  <h4 class="text-grayMist uppercase text-base">Problem</h4>
+                  <h4 class="text-grayMist uppercase text-base">Solution</h4>
                   <p
                     class="text-light font-LibreBaskerville text-2xl md:text-4xl leading-10"
                   >
-                    The lack of a unified system to efficiently monitor and
-                    display errors across projects, requiring seamless
-                    integration between the error tracking platform (Sentry) and
-                    the project management website
+                    Developing a real-time integration system focused on
+                    monitoring issues or errors within the project management
+                    system, aimed at enhancing developer productivity in
+                    debugging
                   </p>
                 </div>
                 <img
                   loading="lazy"
-                  src="/src/assets/image/problem.png"
+                  src="/src/assets/image/solution.png"
                   alt=""
                 />
                 <div class="flex flex-col gap-4">
@@ -278,12 +274,10 @@ const scrollToSection = (sectionId) => {
                     <span class="text-grayMist uppercase text-base">
                       STRATEGY</span
                     >
-                    Our approach focuses on user-centered design, integrating
-                    feedback from real users to guide the redesign. We aim to
-                    create a visually appealing, accessible, and functional
-                    platform with streamlined navigation and modern aesthetics,
-                    aligning with current UX/UI best practices to deliver an
-                    engaging experience for a diverse audience
+                    Designing and developing an integrated system between Sentry
+                    and OpenProject to automatically and in real-time track
+                    errors caused by human error or system failures, enhancing
+                    issue management efficiency
                   </p>
                 </div>
               </div>

@@ -152,6 +152,16 @@ gsap.registerPlugin(ScrollTrigger);
                   >
                     <p class="text-xs sm:text-sm text-light">WEBSITE</p>
                   </div>
+                  <div
+                    class="px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
+                  >
+                    <p class="text-xs sm:text-sm text-light">VUE</p>
+                  </div>
+                  <div
+                    class="px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
+                  >
+                    <p class="text-xs sm:text-sm text-light">LARAVEL</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -160,7 +170,7 @@ gsap.registerPlugin(ScrollTrigger);
               <h3
                 class="text-[32px] md:text-[40px] font-LibreBaskerville text-light"
               >
-              Real-Time Error Tracking with Sentry Integration
+                Real-Time Error Tracking with Sentry Integration
               </h3>
               <p
                 class="text-grayMist text-base md:text-xl leading-7 line-clamp-3"
@@ -183,7 +193,7 @@ gsap.registerPlugin(ScrollTrigger);
             </div>
           </div>
           <div
-            class="flex-col-reverse flex p-4 md:p-6 bg-gradient-to-tr from-dark to-greyCardDard rounded-xl md:flex-row gap-6 md:items-center transition-all duration-500 ease-in-out transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-indigo-50/10 border-2 border-greyCardDard hover:border-greyDark"
+            class="max-h-full flex-col-reverse flex p-4 md:p-6 bg-gradient-to-tr from-dark to-greyCardDard rounded-xl md:flex-row gap-6 md:items-center transition-all duration-500 ease-in-out transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-indigo-50/10 border-2 border-greyCardDard hover:border-greyDark"
           >
             <div class="flex flex-col gap-4">
               <h3
@@ -194,12 +204,9 @@ gsap.registerPlugin(ScrollTrigger);
               <p
                 class="text-grayMist text-base md:text-xl leading-7 line-clamp-3"
               >
-                The redesigned website for The Solo International Performing
-                Arts (SIPA) Festival transformed its digital presence,
-                showcasing vibrant cultural performances more effectively.
-                Within 30 days, the redesign drove over 2,000 new users and
-                achieved a remarkable 15,233% traffic increase, solidifying
-                SIPA’s position as a global hub for cultural expression.
+                The redesigned SIPA website boosted traffic by 15,233%, gained
+                2,000+ users in 30 days, and cemented its status as a global
+                cultural hub
               </p>
               <router-link
                 to="/sipa-new-face"
@@ -213,19 +220,24 @@ gsap.registerPlugin(ScrollTrigger);
                 />
               </router-link>
             </div>
-            <div class="relative rounded-2xl overflow-hidden">
+            <div class="relative rounded-2xl overflow-hidden max-w-xl">
               <img
                 loading="lazy"
                 src="/src/assets/image/SIPA.png"
                 alt=""
-                class="object-cover h-auto w-full"
+                class="object-cover"
               />
               <div class="absolute top-3 left-3 md:top-6 md:left-6">
-                <div class="flex gap-3">
+                <div class="flex flex-wrap gap-2 sm:gap-3">
                   <div
                     class="w-fit px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
                   >
                     <p class="text-light text-sm">CASE STUDY</p>
+                  </div>
+                  <div
+                    class="w-fit px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
+                  >
+                    <p class="text-light text-sm">REVAMP</p>
                   </div>
                   <div
                     class="w-fit px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
@@ -247,11 +259,16 @@ gsap.registerPlugin(ScrollTrigger);
                 class="object-cover w-full h-auto"
               />
               <div class="absolute top-3 left-3 md:top-6 md:left-6">
-                <div class="flex gap-3">
+                <div class="flex flex-wrap gap-2 sm:gap-3">
                   <div
                     class="w-fit px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
                   >
                     <p class="text-light text-sm">CASE STUDY</p>
+                  </div>
+                  <div
+                    class="w-fit px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
+                  >
+                    <p class="text-light text-sm">UIX DESIGN</p>
                   </div>
                   <div
                     class="w-fit px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
@@ -310,7 +327,7 @@ gsap.registerPlugin(ScrollTrigger);
             />
           </routee-link>
         </div>
-        <div class="flex gap-6 flex-row overflow-x-auto overflow-hidden">
+        <div class="flex gap-6 flex-row overflow-x-auto overflow-hidden scrollbar-hide">
           <div class="flex flex-col gap-4 max-w-md">
             <img
               loading="lazy"
