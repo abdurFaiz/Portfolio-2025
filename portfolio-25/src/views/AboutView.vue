@@ -3,6 +3,7 @@ import DefaultLayoutView from "./layout/DefaultLayoutView.vue";
 import lightPlus from "@/assets/icon/light-plus.svg";
 import lightMinus from "@/assets/icon/light-minus.svg";
 import { ref } from "vue";
+import { RouterLink } from "vue-router";
 
 // Create an array of work experiences
 const experiences = [
@@ -10,7 +11,7 @@ const experiences = [
     id: 1,
     title: "Frontend Developer • GMEDIA",
     description:
-      "Delivered high-quality web applications by collaborating with cross-functional teams. Increased productivity by 20% with Agile practices. Ensured responsive design for superior user experience across all devices.",
+      "I specialize in designing user-centric product interfaces, managing the process from initial research and conceptualization to delivering polished designs to the development team. My responsibilities include translating designs into clean, maintainable code using Vue.js and TailwindCSS, ensuring pixel-perfect implementation, and seamlessly integrating UI components with REST APIs to meet product requirements",
   },
   {
     id: 2,
@@ -44,6 +45,26 @@ const openStates = ref(new Map(experiences.map((exp) => [exp.id, false])));
 const toggleDropdown = (id) => {
   openStates.value.set(id, !openStates.value.get(id));
 };
+
+// Create separate hover states for each card
+const hoveredCards = ref({
+  card1: false,
+  card2: false,
+  card3: false,
+});
+
+const getBottomPosition = (cardId) => {
+  if (window.innerWidth >= 1024) {
+    // For large screens (e.g., desktop)
+    return { bottom: hoveredCards.value[cardId] ? "-72px" : "48px" };
+  } else if (window.innerWidth >= 768) {
+    // For medium screens (e.g., tablet)
+    return { bottom: hoveredCards.value[cardId] ? "-72px" : "-40px" };
+  } else {
+    // For small screens (e.g., mobile)
+    return { bottom: hoveredCards.value[cardId] ? "-48px" : "0px" };
+  }
+};
 </script>
 
 <template>
@@ -51,13 +72,37 @@ const toggleDropdown = (id) => {
     <section id="welcome" class="pt-24 md:pt-28 px-4 md:px-16">
       <div class="flex flex-col gap-20 md:gap-48">
         <!-- Previous sections remain unchanged -->
-        <div class="flex flex-col items-center gap-12 md:gap-32">
+        <div
+          class="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-28 mx-0 md:mx-20"
+        >
+          <div class="flex flex-col justify-center gap-6 max-w-4xl">
+            <p
+              class="font-LibreBaskerville text-light text-2xl leading-10 w-full"
+            >
+              I'm an undergraduate student majoring in Informatics Engineering.
+              More than just a developer,
+              <span class="text-accent">I'm a digital problem solver</span> who
+              turns challenges into elegant solutions. With a mix of technical
+              skills and creativity, I craft websites that tell stories and
+              solve real-world problems.
+            </p>
+            <div
+              class="relative px-4 py-2 border-2 border-accent animate-ping-border w-fit rounded-full"
+            >
+              <a
+                href="#me"
+                class="text-accent border-accent rounded-full bg-accent/10 w-fit font-LibreBaskerville text-xl md:text-2xl"
+              >
+                Find out more
+              </a>
+            </div>
+          </div>
           <div class="flex flex-col items-center relative">
             <img
-            loading="lazy"
+              loading="lazy"
               src="/src/assets/image/profile-img.png"
               alt=""
-              class="max-w-64 md:max-w-md h-auto"
+              class="max-w-64 md:max-w-lg h-auto"
             />
             <div class="absolute -bottom-5 md:-bottom-9">
               <h1
@@ -67,17 +112,165 @@ const toggleDropdown = (id) => {
               </h1>
             </div>
           </div>
-          <div class="flex flex-col justify-center max-w-4xl">
-            <p
-              class="font-LibreBaskerville text-light text-2xl leading-10 w-full text-center"
+        </div>
+        <div class="flex flex-col gap-4" id="me">
+          <div class="flex flex-col md:flex-row gap-4">
+            <div
+              class="relative flex flex-row justify-between max-w-full sm:max-w-md w-fit"
+              @mouseover="hoveredCards.card1 = true"
+              @mouseleave="hoveredCards.card1 = false"
             >
-              I'm an undergraduate student majoring in Informatics Engineering.
-              More than just a developer,
-              <span class="text-accent">I'm a digital problem solver</span> who
-              turns challenges into elegant solutions. With a mix of technical
-              skills and creativity, I craft websites that tell stories and
-              solve real-world problems.
-            </p>
+              <!-- Image container -->
+              <div class="relative w-full sm:w-auto">
+                <img
+                  src="/src/assets/image/bg-profile.jpeg"
+                  alt="background profile"
+                  class="rounded-2xl h-64 sm:h-80 w-full object-cover transition-all duration-500"
+                  :class="{ 'blur-sm': hoveredCards.card1 }"
+                  loading="lazy"
+                />
+                <!-- Gradient overlay -->
+                <div
+                  class="absolute bg-gradient-to-t from-dark/30 to-transparent rounded-2xl"
+                ></div>
+              </div>
+
+              <!-- Content container -->
+              <div
+                class="absolute size-full"
+                :style="getBottomPosition('card1')"
+              >
+                <!-- after hover -->
+                <div v-if="hoveredCards.card1" id="short-decs" class="px-4">
+                  <p class="text-base text-greyDark">
+                    I began my journey in frontend development, refining my
+                    ability to create visually stunning, functional designs with
+                    clean, efficient code. Now, as both a frontend developer and
+                    UI/UX designer, I fuse visual creativity with a
+                    problem-solving approach to deliver impactful, user-centered
+                    solutions in every project
+                  </p>
+                </div>
+                <!-- before hover -->
+
+                <div v-if="!hoveredCards.card1" class="flex flex-col gap-2">
+                  <p
+                    class="uppercase text-base text-greyDark px-4 font-semibold mt-6 md:mt-60"
+                  >
+                    my background
+                  </p>
+                  <div class="flex flex-row justify-between items-center">
+                    <h3 class="text-greyCardDard text-4xl px-4 leading-9">
+                      Designing elegance, coding precision
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-4">
+              <div
+                class="relative flex flex-row justify-between max-w-full w-fit"
+                @mouseover="hoveredCards.card2 = true"
+                @mouseleave="hoveredCards.card2 = false"
+              >
+                <!-- Image container -->
+                <div class="relative w-full sm:w-auto">
+                  <img
+                    src="/src/assets/image/bg-approach.jpeg"
+                    alt="background profile"
+                    class="rounded-2xl h-64 sm:h-80 w-full object-cover transition-all duration-500"
+                    :class="{ 'blur-sm': hoveredCards.card2 }"
+                    loading="lazy"
+                  />
+                  <!-- Gradient overlay -->
+                  <div
+                    class="absolute bg-gradient-to-t from-dark/80 to-transparent rounded-2xl"
+                  ></div>
+                </div>
+
+                <!-- Content container -->
+                <div
+                  class="absolute size-full"
+                  :style="getBottomPosition('card2')"
+                >
+                  <!-- after hover -->
+                  <div v-if="hoveredCards.card2" id="short-decs" class="px-4">
+                    <p class="text-base text-greyDark">
+                      My Approach User-centered mindset & collaboration I
+                      prioritize user needs in every design and thrive in
+                      collaborative environments. Working with cross-functional
+                      teams, I create impactful solutions that deliver real
+                      value.
+                    </p>
+                  </div>
+                  <!-- before hover -->
+
+                  <div v-if="!hoveredCards.card2" class="flex flex-col gap-2">
+                    <p
+                      class="uppercase text-base text-greyDark px-4 font-semibold mt-6 md:mt-60"
+                    >
+                      my approach
+                    </p>
+                    <div class="flex flex-row justify-between items-center">
+                      <h3 class="text-greyCardDard text-4xl px-4 leading-9">
+                        User-centered mindset & collaboration
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="relative flex flex-row justify-between max-w-full w-full md:w-fit"
+                @mouseover="hoveredCards.card3 = true"
+                @mouseleave="hoveredCards.card3 = false"
+              >
+                <!-- Image container -->
+                <div class="relative w-full sm:w-auto">
+                  <img
+                    src="/src/assets/image/hobbies.jpg"
+                    alt="background profile"
+                    class="rounded-2xl h-64 sm:h-80 w-full object-cover transition-all duration-500"
+                    :class="{ 'blur-sm': hoveredCards.card3 }"
+                    loading="lazy"
+                  />
+                  <!-- Gradient overlay -->
+                  <div
+                    class="absolute bg-gradient-to-t from-dark/80 to-transparent rounded-2xl"
+                  ></div>
+                </div>
+
+                <!-- Content container -->
+                <div
+                  class="absolute size-full"
+                  :style="getBottomPosition('card3')"
+                >
+                  <!-- after hover -->
+                  <div v-if="hoveredCards.card3" id="short-decs" class="px-4">
+                    <p class="text-base text-grayMist">
+                      I've conquered some of Indonesia's most stunning
+                      mountains, each offering breathtaking views and
+                      unforgettable adventures. Along the way, I indulge in
+                      local cuisines, savoring unique flavors that make every
+                      destination a delicious discovery!
+                    </p>
+                  </div>
+                  <!-- before hover -->
+
+                  <div v-if="!hoveredCards.card3" class="flex flex-col gap-2">
+                    <p
+                      class="uppercase text-base text-grayMist px-4 font-semibold mt-6 md:mt-60"
+                    >
+                      my hobbies
+                    </p>
+                    <div class="flex flex-row justify-between items-center">
+                      <h3 class="text-grayMist text-4xl px-4 leading-9">
+                        Curious explorer
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="flex flex-col items-center gap-12">
@@ -167,7 +360,7 @@ const toggleDropdown = (id) => {
                   <!-- Transition for icon switch -->
                   <transition name="fade" mode="out-in">
                     <img
-                    loading="lazy"
+                      loading="lazy"
                       :key="openStates.get(exp.id) ? 'minus' : 'plus'"
                       :src="openStates.get(exp.id) ? lightMinus : lightPlus"
                       alt=""
@@ -202,6 +395,32 @@ const toggleDropdown = (id) => {
 </template>
 
 <style scoped>
+img {
+  transition: filter 0.7s ease, transform 0.7s ease;
+}
+
+#short-decs {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#short-decs {
+  opacity: 1;
+}
+
+@keyframes ping-border {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 61, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 12px rgba(255, 61, 0, 0);
+  }
+}
+
+.animate-ping-border {
+  animation: ping-border 1.5s infinite;
+}
+
 /* Fade transition for icons */
 .fade-enter-active,
 .fade-leave-active {
@@ -223,5 +442,26 @@ const toggleDropdown = (id) => {
 .expand-enter-from,
 .expand-leave-to {
   opacity: 0;
+}
+
+/* For large screens (desktop) */
+@media (min-width: 1024px) {
+  .absolute {
+    transition: bottom 0.3s ease-in-out;
+  }
+}
+
+/* For medium screens (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .absolute {
+    transition: bottom 0.3s ease-in-out;
+  }
+}
+
+/* For small screens (mobile devices) */
+@media (max-width: 767px) {
+  .absolute {
+    transition: bottom 0.3s ease-in-out;
+  }
 }
 </style>

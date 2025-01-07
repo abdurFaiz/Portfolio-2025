@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{vue, js,ts,jsx,tsx}"],
-  darkMode: 'selector',
+  darkMode: "selector",
   theme: {
     extend: {
       fontFamily: {
@@ -15,6 +15,7 @@ export default {
         grayMist: "#909090",
         greyDark: "#2e2e2e",
         greyCardDard: "#1B1B1B",
+        greenLight: "#21B70A",
       },
       animation: {
         slide: "slide 0.5s ease-in-out",

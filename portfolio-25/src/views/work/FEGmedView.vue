@@ -104,7 +104,7 @@ const scrollToSection = (sectionId) => {
           <div class="w-full h-full flex justify-end">
             <img
               loading="lazy"
-              src="/src/assets/image/gmed-detl.png"
+              src="/src/assets/image/outcomes-gmed.png"
               alt=""
               class="object-cover h-auto rounded-none md:rounded-l-2xl my-0 md:my-6 shadow-lg shadow-blue-800/20"
             />
