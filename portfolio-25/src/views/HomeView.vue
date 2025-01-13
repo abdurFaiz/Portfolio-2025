@@ -3,9 +3,145 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import DefaultLayoutView from "./layout/DefaultLayoutView.vue";
 import { RouterLink } from "vue-router";
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
+
+const hoveredCards = ref([]);
+
+const mouseHover = (index) => {
+  hoveredCards.value[index] = true;
+};
+
+const mouseLeave = (index) => {
+  hoveredCards.value[index] = false;
+};
+
+const cards = [
+  {
+    image: "/src/assets/image/Dont-Explore.png",
+    title: "Platform Donation",
+    description:
+      'A "Platform Donation" is an online system for secure, easy donations to charitable causes.',
+    link: "/donation-platform",
+  },
+  {
+    image: "/src/assets/image/Fitns-Explore.png",
+    title: "LifePulse",
+    description:
+      "No matter where you start, every move builds a stronger, fitter you. Let’s grow together.",
+    link: "/fitness-app",
+  },
+  {
+    image: "/src/assets/image/Dive-Explore.png",
+    title: "Dive for Live",
+    description:
+      "Dive into action! This microsite invites volunteers on ocean adventures to collect plastic waste, raise awareness, and promote a cleaner, sustainable future.",
+    link: "/valounteer-platform",
+  },
+];
 
 gsap.registerPlugin(ScrollTrigger);
+
+onMounted(() => {
+  gsap.from("#works h2", {
+    scrollTrigger: {
+      trigger: "#works h2",
+      start: "top bottom-=150",
+      end: "bottom center",
+      scrub: 1,
+      toggleActions: "play none none reverse",
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power2.out",
+  });
+
+  const workItems = document.querySelectorAll("#works .flex-col.gap-12 > div");
+
+  workItems.forEach((item, index) => {
+    gsap.from(item, {
+      scrollTrigger: {
+        trigger: item,
+        start: "top bottom-=100",
+        end: "center center+=100",
+        scrub: 1,
+      },
+      y: 50,
+      opacity: 0,
+      duration: 1.5,
+      delay: index * 0.15,
+      ease: "power3.out",
+    });
+
+    const image = item.querySelector("img");
+    if (image) {
+      gsap.from(image, {
+        scrollTrigger: {
+          trigger: image,
+          start: "top bottom-=50",
+          end: "center center",
+          scrub: 1,
+        },
+        scale: 0.95,
+        opacity: 0,
+        duration: 2,
+        delay: index * 0.15 + 0.2,
+        ease: "power2.inOut",
+      });
+    }
+
+    const textContent = item.querySelector(".flex-col.gap-4");
+    if (textContent) {
+      gsap.from(textContent, {
+        scrollTrigger: {
+          trigger: textContent,
+          start: "top bottom-=50",
+          end: "center center",
+          scrub: 1,
+        },
+        y: 20,
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.1,
+        delay: index * 0.15 + 0.3,
+        ease: "power2.inOut",
+      });
+    }
+
+    // Tags animation
+    const tags = item.querySelector(".absolute");
+    if (tags) {
+      gsap.from(tags.children, {
+        scrollTrigger: {
+          trigger: tags,
+          start: "top bottom-=50",
+          scrub: 1,
+        },
+        x: -20,
+        opacity: 0,
+        stagger: 0.1,
+      });
+    }
+
+    const routerLink = item.querySelector("router-link");
+    if (routerLink) {
+      gsap.from(routerLink.children, {
+        scrollTrigger: {
+          trigger: routerLink,
+          start: "top bottom-=50",
+          end: "center center",
+          scrub: 1,
+        },
+        y: 20,
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.1,
+        delay: index * 0.15 + 0.5,
+        ease: "power2.inOut",
+      });
+    }
+  });
+});
 </script>
 
 <template>
@@ -62,7 +198,7 @@ gsap.registerPlugin(ScrollTrigger);
           </h2>
           <img
             loading="lazy"
-            class="w-20 md:w-32 transform transition-all duration-700 ease-in-out hover:scale-150"
+            class="w-20 md:w-32 transition-all duration-700 ease-in-out hover:scale-150"
             src="/src/assets/image/hero-img-sm.png"
             alt="Hero Image"
           />
@@ -82,7 +218,7 @@ gsap.registerPlugin(ScrollTrigger);
           </h2>
           <img
             loading="lazy"
-            class="w-20 md:w-32 transform transition-all duration-700 ease-in-out hover:scale-150"
+            class="w-20 md:w-32 transition-all duration-700 ease-in-out hover:scale-150"
             src="/src/assets/image/indonesian.png"
             alt="Indonesian Flag"
           />
@@ -327,56 +463,56 @@ gsap.registerPlugin(ScrollTrigger);
             />
           </routee-link>
         </div>
-        <div class="flex gap-6 flex-row overflow-x-auto overflow-hidden scrollbar-hide">
-          <div class="flex flex-col gap-4 max-w-md">
-            <img
-              loading="lazy"
-              src="/src/assets/image/Dont-Explore.png"
-              alt=""
-              class="max-w-96 rounded-2xl"
-            />
-            <div class="flex flex-col gap-2">
-              <h4 class="text-2xl font-LibreBaskerville text-light">
-                Platform Donation
-              </h4>
-              <p class="text-base text-light">
-                A "Platform Donation" is an online system for secure, easy
-                donations to charitable causes.
-              </p>
+        <div
+          class="flex gap-6 flex-row overflow-x-auto overflow-hidden scrollbar-hide"
+        >
+          <div
+            class="flex flex-col gap-4 max-w-md"
+            v-for="(card, index) in cards"
+            :key="index"
+          >
+            <div
+              class="relative group"
+              @mouseenter="mouseHover(index)"
+              @mouseleave="mouseLeave(index)"
+            >
+              <img
+                loading="lazy"
+                :src="card.image"
+                alt=""
+                :class="[
+                  'max-w-96 rounded-2xl transition-all duration-300 ease-in-out transform',
+                  hoveredCards[index] ? 'brightness-[0.2]' : 'brightness-100',
+                ]"
+              />
+              <div
+                class="absolute top-1/2 left-1/2"
+                :class="{
+                  'opacity-100': hoveredCards[index],
+                  'opacity-0': !hoveredCards[index],
+                }"
+              >
+                <div
+                  class="flex flex-col gap-4 md:gap-6 items-center justify-center w-full"
+                >
+                  <div
+                    class="w-fit px-4 py-2 rounded-full bg-light drop-shadow-sm shadow-light"
+                  >
+                    <router-link
+                      :to="card.link"
+                      class="text-base md:text-xl text-greyCardDard hover:text-accent transform transition-all ease-in-out hover:duration-500"
+                      >View</router-link
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="flex flex-col gap-4 max-w-md">
-            <img
-              loading="lazy"
-              src="/src/assets/image/Fitns-Explore.png"
-              alt=""
-              class="max-w-96 rounded-2xl"
-            />
             <div class="flex flex-col gap-2">
               <h4 class="text-2xl font-LibreBaskerville text-light">
-                LifePulse
+                {{ card.title }}
               </h4>
-              <p class="text-base text-light">
-                No matter where you start, every move builds a stronger, fitter
-                you. Let’s grow together.
-              </p>
-            </div>
-          </div>
-          <div class="flex flex-col gap-4 max-w-md">
-            <img
-              loading="lazy"
-              src="/src/assets/image/Dive-Explore.png"
-              alt=""
-              class="max-w-96 rounded-2xl"
-            />
-            <div class="flex flex-col gap-2">
-              <h4 class="text-2xl font-LibreBaskerville text-light">
-                Dive for Live
-              </h4>
-              <p class="text-base text-light line-clamp-2">
-                Dive into action! This microsite invites volunteers on ocean
-                adventures to collect plastic waste, raise awareness, and
-                promote a cleaner, sustainable future.
+              <p class="text-base text-light line-clamp-3">
+                {{ card.description }}
               </p>
             </div>
           </div>

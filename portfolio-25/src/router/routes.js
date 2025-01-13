@@ -6,6 +6,9 @@ import NotFoundView from "@/views/error/404View.vue";
 import WNCaseStudyView from "@/views/work/WNCaseStudyView.vue";
 import FWSipaView from "@/views/work/FWSipaView.vue";
 import FEGmedView from "@/views/work/FEGmedView.vue";
+import DonationView from "@/views/design/DonationView.vue";
+import FitnessView from "@/views/design/FitnessView.vue";
+import ValounteerView from "@/views/design/ValounteerView.vue";
 
 const routes = [
   {
@@ -47,6 +50,21 @@ const routes = [
     path: "/integrator-web-case-study",
     name: "integrator-web-case-study",
     component: FEGmedView,
+  },
+  {
+    path: "/donation-platform",
+    name: "donation-platform",
+    component: DonationView,
+  },
+  {
+    path: "/fitness-app",
+    name: "fitness-app",
+    component: FitnessView,
+  },
+  {
+    path: "/valounteer-platform",
+    name: "valounteer-platform",
+    component: ValounteerView,
   },
 ];
 

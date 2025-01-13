@@ -307,6 +307,64 @@ const scrollToSection = (sectionId) => {
             </nav>
           </div>
         </div>
+        <div
+          class="flex flex-col md:flex-row gap-6 md:gap-10 px-6 md:px-32 justify-center my-6 md:my-20"
+        >
+          <h4 class="font-LibreBaskerville text-light text-3xl md:text-6xl">
+            Next Project
+          </h4>
+          <div class="flex flex-col gap-4 max-w-xl">
+            <div class="flex flex-col gap-4 relative">
+              <img
+                loading="lazy"
+                src="/src/assets/image/SIPA.png"
+                alt=""
+                class="max-w-xl h-auto w-full rounded-2xl"
+              />
+              <div class="absolute top-3 left-3 md:top-6 md:left-6">
+                <div class="flex gap-3">
+                  <div
+                    class="w-fit px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
+                  >
+                    <p class="text-light text-sm">CASE STUDY</p>
+                  </div>
+                  <div
+                    class="w-fit px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
+                  >
+                    <p class="text-light text-sm">REVAMP</p>
+                  </div>
+                  <div
+                    class="w-fit px-2 py-1 rounded-full bg-grayMist/50 backdrop-blur-2xl"
+                  >
+                    <p class="text-light text-sm">WEBSITE</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h6 class="font-LibreBaskerville text-light text-2xl">
+                International Event Performing Arts
+              </h6>
+              <p class="text-grayMist text-base leading-7 line-clamp-3">
+                Revamped SIPA Festival's website boosted user experience,
+                attracting 2,000+ new users and a 15,233% traffic surge in 30
+                days, amplifying its cultural impact globally
+              </p>
+            </div>
+            <router-link
+              to="/sipa-new-face"
+              class="text-light text-base md:text-lg leading-7 gap-1 flex items-center hover:px-3 hover:py-[6px] hover:rounded-full hover:bg-greyDark w-fit hover:shadow-xl hover:shadow-indigo-50/10 transform transition-all duration-500 ease-in-out"
+            >
+              VIEW
+              <img
+                loading="lazy"
+                src="/src/assets/icon/thin-arrow-right.svg"
+                width="24px"
+                alt=""
+              />
+            </router-link>
+          </div>
+        </div>
       </div>
     </section>
   </DefaultLayoutView>
